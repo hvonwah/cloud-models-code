@@ -1,0 +1,32 @@
+# Install NGSolve from sources. The details may depend of your computer and 
+# OS/distribution. For further details and cmake options, see the documentation
+# at https://docu.ngsolve.org/nightly/install/install_sources.html
+# Prerequisites here are mkl, an mpi distribution and mpi4py.
+
+git clone https://github.com/NGSolve/ngsolve.git src-ngs
+
+cd src-ngs
+git checkout 10c791b00
+git submodule update --recursive --init
+
+cd ..
+mkdir inst build-ngs
+
+cd build-ngs
+
+# Configure build options for NGSolve/Netgen
+
+cmake \
+-DCMAKE_BUILD_TYPE=RELEASE \
+-DCMAKE_INSTALL_PREFIX=../inst \
+-DUSE_GUI=OFF \
+-DMKL_ROOT=${MKLROOT} \
+-DUSE_UMFPACK=ON \
+-DUSE_MKL=ON \
+-DUSE_MPI=ON \
+-DUSE_OCC=ON \
+-DBUILD_OCC=ON \
+../src-ngs/
+
+make -j12
+make install
