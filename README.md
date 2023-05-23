@@ -1,3 +1,6 @@
+[![DOI](https://zenodo.org/badge/643925360.svg)](https://zenodo.org/badge/latestdoi/643925360)
+
+
 This repository contains the python scripts to reproduce the computational examples presented in "A discontinuous Galerkin approach for atmospheric flows with implicit condensation" by S. Hittmeir, P. L. Lederer. J. Schöberl and H. v. Wahl.
 
 # Files
