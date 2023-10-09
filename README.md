@@ -1,7 +1,7 @@
 [![DOI](https://zenodo.org/badge/643925360.svg)](https://zenodo.org/badge/latestdoi/643925360)
 
 
-This repository contains the python scripts to reproduce the computational examples presented in "A discontinuous Galerkin approach for atmospheric flows with implicit condensation" by S. Hittmeir, P. L. Lederer. J. Schöberl and H. v. Wahl.
+This repository contains the python scripts to reproduce the computational examples presented in "A discontinuous Galerkin approach for atmospheric flows with implicit condensation" by S. Doppler, P. L. Lederer. J. Schöberl and H. v. Wahl.
 
 # Files
 ```
@@ -32,16 +32,19 @@ This repository contains the python scripts to reproduce the computational examp
 |- Example 4.6
 |  |- run.bash
 |  |- rainy_air_unsaturated_rising_bubble_3d.py
+|- Example 4.7
+|  |- run.bash
+|  |- rainy_air_squall_line.py
+|  |- data_squall_line.txt
 ```
 
 # Installation
-
 Detailed instructions and the specific version of NGSolve used are given in `install.txt`.
 
 # How to reproduce
 The specific examples presented in our work are implemented in the python files of the corresponding folders. The `run.bash` file in each subdirectory contains the command-line options used to compute the presented results. 
 
-**IMPORTANT:** The computations require large computational resources, depending on the discretisation parameters used. It may also be beneficial to change some of the parameters inside the python files. In particular it may be worth changing 
-- `compile_flag=True` to produce and compile c++ code of the forms for faster evaluation
+**IMPORTANT:** The computations require large computational resources, depending on the discretisation parameters used. It may also be beneficial to change some of the parameters inside the python files. In particular it may be worth changing:
+- `compile_flag=True` to produce and compile c++ code of the forms for faster evaluation.
 - `vtk_flag=True` to export VTK files to inspect the results visually after the simulation. 
 - `SetNumThreads(X)` to set the number of shared-memory parallel threads to `X`.
