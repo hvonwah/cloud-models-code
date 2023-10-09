@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/643925360.svg)](https://zenodo.org/badge/latestdoi/643925360)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8422378.svg)](https://doi.org/10.5281/zenodo.8422378)
 
 
 This repository contains the python scripts to reproduce the computational examples presented in "A discontinuous Galerkin approach for atmospheric flows with implicit condensation" by S. Doppler, P. L. Lederer. J. Schöberl and H. v. Wahl.
